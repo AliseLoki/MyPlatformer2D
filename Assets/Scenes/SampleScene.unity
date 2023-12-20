@@ -174,6 +174,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   _jumpForce: 5
+  _abilityDistance: 10
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &69066789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +381,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentHealth: 0
   _maxHealth: 100
+  _sip: 5
+  _isDrinkingBlood: 0
 --- !u!1 &126236453
 GameObject:
   m_ObjectHideFlags: 0

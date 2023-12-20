@@ -2,11 +2,14 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerInput))]
+[RequireComponent (typeof(Health))]
 
 public class PlayerMover : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
+    [SerializeField] private float _abilityDistance = 10f;
+    [SerializeField] private LayerMask _layerMask;
 
     private float _rotationAngle = 0;
     private bool _isAttacking;
@@ -29,6 +32,7 @@ public class PlayerMover : MonoBehaviour
         ControlJump();
         MoveLeftOrRight();
         Attack();
+        DrinkBlood();
     }
 
     private void MoveLeftOrRight()
@@ -80,6 +84,20 @@ public class PlayerMover : MonoBehaviour
         else if(_playerInput.StopAttackKey)
         {
             _isAttacking = false;
+        }
+    }
+
+    private void DrinkBlood()
+    {
+        if(_playerInput.VampireAbilityKey)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, _abilityDistance, _layerMask);
+
+            if (hit)
+            {
+                GetComponent<Health>().GetBlood();
+                hit.collider.GetComponent<Health>().GiveBlood();
+            }
         }
     }
 }

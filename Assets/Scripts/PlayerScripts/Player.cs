@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 
     private int _gold;
 
+    public int Damage => _damage;
+
     public event UnityAction<int> GoldChanged;
 
     private void OnTriggerEnter2D(Collider2D collider)

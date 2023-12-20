@@ -11,11 +11,14 @@ public class PlayerInput : MonoBehaviour
 
     public bool StopAttackKey { get; private set; }
 
+    public bool VampireAbilityKey { get; private set; }
+
     private void Update()
     {
         HorizontalInput = Input.GetAxis(Horizontal);
         JumpKey = Input.GetKeyDown(KeyCode.Space);
         AttackKey = Input.GetKeyDown(KeyCode.E);
         StopAttackKey = Input.GetKeyUp(KeyCode.E);
+        VampireAbilityKey = Input.GetKeyDown(KeyCode.Q);
     }
 }

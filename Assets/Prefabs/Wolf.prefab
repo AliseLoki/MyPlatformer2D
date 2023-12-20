@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 6056746592282022736}
   - component: {fileID: 204624345894910217}
   - component: {fileID: 3970094600606796097}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wolf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,6 +345,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentHealth: 0
   _maxHealth: 60
+  _sip: 5
+  _isDrinkingBlood: 0
 --- !u!1 &2840518679345518600
 GameObject:
   m_ObjectHideFlags: 0
