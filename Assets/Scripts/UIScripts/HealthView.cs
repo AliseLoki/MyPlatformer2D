@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class HealthView : MonoBehaviour
 {
     [SerializeField] private float _duration = 2;
-    [SerializeField] private Health _health;
+    [SerializeField] private HitPoints _health;
     [SerializeField] private Slider _slider;
 
     private Coroutine _coroutine;

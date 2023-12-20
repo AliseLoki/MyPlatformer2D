@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerInput))]
-[RequireComponent (typeof(Health))]
+[RequireComponent (typeof(HitPoints))]
 
 public class PlayerMover : MonoBehaviour
 {
@@ -95,8 +95,8 @@ public class PlayerMover : MonoBehaviour
 
             if (hit)
             {
-                GetComponent<Health>().GetBlood();
-                hit.collider.GetComponent<Health>().GiveBlood();
+                GetComponent<HitPoints>().GetBlood();
+                hit.collider.GetComponent<HitPoints>().GiveBlood();
             }
         }
     }

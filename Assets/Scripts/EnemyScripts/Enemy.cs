@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-[RequireComponent (typeof(Health))]
+[RequireComponent (typeof(HitPoints))]
 
 public class Enemy : MonoBehaviour
 {
@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         if (collision.TryGetComponent(out Player player))
         {
             _animator.SetBool(IsAttacking, true);
-            player.GetComponent<Health>().ChangeHealth(-_damage);
+            player.GetComponent<HitPoints>().ChangeHealth(-_damage);
         } 
     }
 

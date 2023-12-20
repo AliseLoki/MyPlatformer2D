@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Health))]
+[RequireComponent(typeof(HitPoints))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Health _health;
+    [SerializeField] private HitPoints _health;
     [SerializeField] private PlayerMover _playerMover;
     [SerializeField] private int _damage = 30;
 
@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         {
             if (_playerMover.IsAttacking == true)
             {
-                enemy.GetComponent<Health>().ChangeHealth(-_damage);
+                enemy.GetComponent<HitPoints>().ChangeHealth(-_damage);
             }
         }
     }

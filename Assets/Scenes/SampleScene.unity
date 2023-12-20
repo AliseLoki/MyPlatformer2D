@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 69066792}
   - component: {fileID: 69066794}
   - component: {fileID: 69066795}
-  - component: {fileID: 69066796}
+  - component: {fileID: 69066797}
   m_Layer: 3
   m_Name: Angie
   m_TagString: Untagged
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c8107ba13eee5e4197d6ac34c43ae4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: {fileID: 69066796}
+  _health: {fileID: 69066797}
   _playerMover: {fileID: 69066788}
   _damage: 30
 --- !u!212 &69066790
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc3ae87a0559ca4f97f250ed4e973fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &69066796
+--- !u!114 &69066797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -376,13 +376,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 69066785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c53f487f0e007bb4d9d0c0be57d8b036, type: 3}
+  m_Script: {fileID: 11500000, guid: 056a710d66a8b0441ab816f6c67f4070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHealth: 0
   _maxHealth: 100
   _sip: 5
-  _isDrinkingBlood: 0
 --- !u!1 &126236453
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _duration: 50
-  _health: {fileID: 69066796}
+  _health: {fileID: 69066797}
   _slider: {fileID: 127770080}
 --- !u!1 &131110603
 GameObject:

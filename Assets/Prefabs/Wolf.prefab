@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 8012558502844093659}
   - component: {fileID: 6056746592282022736}
   - component: {fileID: 204624345894910217}
-  - component: {fileID: 3970094600606796097}
+  - component: {fileID: 7935930691335928837}
   m_Layer: 6
   m_Name: Wolf
   m_TagString: Untagged
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 20
---- !u!114 &3970094600606796097
+--- !u!114 &7935930691335928837
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -340,13 +340,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1755168127031016331}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c53f487f0e007bb4d9d0c0be57d8b036, type: 3}
+  m_Script: {fileID: 11500000, guid: 056a710d66a8b0441ab816f6c67f4070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHealth: 0
   _maxHealth: 60
   _sip: 5
-  _isDrinkingBlood: 0
 --- !u!1 &2840518679345518600
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _duration: 50
-  _health: {fileID: 3970094600606796097}
+  _health: {fileID: 7935930691335928837}
   _slider: {fileID: 692966726252585139}
 --- !u!1 &5123140708366191566
 GameObject:

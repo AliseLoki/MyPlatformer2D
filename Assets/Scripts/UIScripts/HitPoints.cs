@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Health : MonoBehaviour
+public class HitPoints : MonoBehaviour
 {
     [SerializeField] private int _currentHealth;
     [SerializeField] private int _maxHealth;
@@ -35,15 +35,15 @@ public class Health : MonoBehaviour
 
     public void GetBlood()
     {
-        _coroutine = StartCoroutine(Countdown(_index));
+        _coroutine = StartCoroutine(UseVampireAbility(_index));
     }
 
     public void GiveBlood()
     {
-        _coroutine = StartCoroutine(Countdown(-_index));
+        _coroutine = StartCoroutine(UseVampireAbility(-_index));
     }
 
-    private IEnumerator Countdown(int index, int vampirismDuration = 6)
+    private IEnumerator UseVampireAbility(int index, int vampirismDuration = 6)
     {
         for (int i = vampirismDuration; i > 0; i--)
         {

@@ -1,9 +1,11 @@
 using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(TMP_Text))]
 public class Score : MonoBehaviour
 {
     [SerializeField] private Player _player;
+
     private TMP_Text _score;
 
     private void Start()
