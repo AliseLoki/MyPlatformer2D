@@ -1,29 +1,16 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(Health))]
 public class Player : MonoBehaviour
 {
-    [SerializeField] private int _health;
+    [SerializeField] private Health _health;
     [SerializeField] private PlayerMover _playerMover;
+    [SerializeField] private int _damage = 30;
 
-    private int _maxHealth = 100;
     private int _gold;
 
-    public event UnityAction<int> HealthChanged;
     public event UnityAction<int> GoldChanged;
-
-
-    private void Start()
-    {
-        _health = _maxHealth;
-        HealthChanged?.Invoke(_health);
-    }
-
-    public void ChangeHealth(int value)
-    {
-        _health = Mathf.Clamp(_health + value, 0, _maxHealth);
-        HealthChanged?.Invoke(_health);
-    }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -35,14 +22,18 @@ public class Player : MonoBehaviour
 
         if (collider.TryGetComponent(out Healing healing))
         {
-            ChangeHealth(healing.HealingPower);
+            if (_health.CurrentHealth < _health.MaxHealth)
+            {
+                _health.ChangeHealth(healing.HealingPower);
+                Destroy(healing.gameObject);
+            }
         }
 
         if (collider.TryGetComponent(out Enemy enemy))
         {
-            if(_playerMover.IsAttacking == true)
+            if (_playerMover.IsAttacking == true)
             {
-                enemy.Die();
+                enemy.GetComponent<Health>().ChangeHealth(-_damage);
             }
         }
     }
